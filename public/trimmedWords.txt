@@ -36,7 +36,7 @@ already
 also
 although
 always
-American
+american
 among
 amount
 analysis
@@ -630,7 +630,6 @@ plan
 plant
 play
 player
-PM
 point
 police
 policy

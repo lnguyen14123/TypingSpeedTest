@@ -7,7 +7,6 @@ const timerDis = document.getElementById('timer');
 const wpmDis = document.getElementById('wpm');
 const resetBtn = document.getElementById('reset-btn');
 
-
 let wordsList;
 let wordsTyped = [];
 let furthestWordOn = 0;
@@ -16,8 +15,11 @@ let charactersCorrect = 0;
 let wordsCorrect = 0;
 let siteState = 'typing';
 
+let audioOn = 0;
+let keyAudios = [];
+initKeyAudios();
 
-const TYPING_TIME_GIVEN = 5;
+const TYPING_TIME_GIVEN = 60;
 let count = TYPING_TIME_GIVEN;
 
 let timer;
@@ -45,6 +47,13 @@ socket.on('connection-info', (data)=>{
 //when user presses space/backspace
 
 typingInput.addEventListener('keydown', (e)=>{
+
+  if(audioOn==keyAudios.length){audioOn=0};
+
+  keyAudios[audioOn].play();
+  audioOn++;
+
+
   //START TIMER WHEN FIRST KEY PRESSED
   if(timer==undefined){
     count = TYPING_TIME_GIVEN;
@@ -122,6 +131,9 @@ typingInput.addEventListener('keydown', (e)=>{
       e.target.value = "";
       typingDisplay.childNodes[wordOn-1].style.background = "#1a1b1c";
       typingDisplay.childNodes[wordOn].style.background = "#24ab33";
+
+      typingDisplay.childNodes[wordOn].scrollIntoView({ behavior: 'smooth', block: 'center'});
+
     }else if(e.code == "Backspace" && wordOn>0){
       if(e.target.value===""){
         e.preventDefault();
@@ -153,7 +165,7 @@ resetBtn.addEventListener('click', ()=>{
     element.style.color = '#e6cc67';
   });
 
-  typingInput.style.display = "inline";
+  typingInput.style.display = "block";
   typingDisplay.style.display = 'block';
   resultDisplay.style.display = 'none';
 
@@ -170,5 +182,11 @@ resetBtn.addEventListener('click', ()=>{
 function removeAllChildNodes(parent) {
   while (parent.firstChild) {
       parent.removeChild(parent.firstChild);
+  }
+}
+
+function initKeyAudios(){
+  for(var i = 0; i<10; i++){
+    keyAudios.push(new Audio('../fx/keySoundT.mp3'));
   }
 }

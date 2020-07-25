@@ -19,21 +19,26 @@ h2{
 }
 
 
-input{
+#typing-input{
+  display: block;
+  position: absolute;
   margin-top: 10px;
-  width: 500px;
+  width: 40%;
   height: 40px;
   font-size: 20px;
   background-color: #1a1b1c;
   color: white;
   border-radius: 20px;
   padding: 10px;
+  margin: auto;
+  left: 30%;
+  top: 80%;
 }
 
 span{
-  font-size: 17px;
+  font-size: 45px;
   border-radius: 10px;
-  padding: 3px;
+  padding: 11px;
   margin: 0px;
   margin-bottom: 0.1em;
   /* letter-spacing: 0.07em; */
@@ -44,9 +49,13 @@ span{
 #words-display{
   /* max-width: 500px; */
   overflow-x: scroll;
-  max-width: 80%;
+  max-width: 60%;
+  max-height: 50%;
   margin: auto;
   text-align: left;
+
+  position: absolute;
+  margin-left: 20%;
 }
 
 #typing-ui{
