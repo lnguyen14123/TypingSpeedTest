@@ -1,0 +1,37 @@
+
+body{
+  font-family: "Roboto-Mono", monospace;
+  background-color: #1d1c1f;
+  color:#e6cc67;
+}
+
+input{
+  width: 300px;
+  height: 40px;
+  font-size: 20px;
+  background-color: #1d1c1f;
+  color: #e6cc67;
+}
+
+span{
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 3px;
+  margin: 0px;
+  margin-bottom: 0.1em;
+  /* letter-spacing: 0.07em; */
+  display: inline-block;
+
+}
+
+#words-display{
+  /* max-width: 500px; */
+  overflow-x: scroll;
+  max-width: 80%;
+  margin: auto;
+  text-align: left;
+}
+
+#typing-ui{
+  text-align: center;
+}

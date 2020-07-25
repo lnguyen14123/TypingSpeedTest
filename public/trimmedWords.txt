@@ -209,7 +209,7 @@ decision
 deep
 defense
 degree
-Democrat
+democrat
 democratic
 describe
 design
@@ -397,7 +397,6 @@ huge
 human
 hundred
 husband
-I
 idea
 identify
 if
@@ -532,8 +531,6 @@ mouth
 move
 movement
 movie
-Mr
-Mrs
 much
 music
 must
@@ -709,7 +706,7 @@ remember
 remove
 report
 represent
-Republican
+republican
 require
 research
 resource
@@ -759,8 +756,6 @@ service
 set
 seven
 several
-sex
-sexual
 shake
 share
 she

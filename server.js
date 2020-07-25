@@ -21,7 +21,8 @@ io.on('connection', socket=>{
   let typingList = [];
 
   for(var i = 0; i<MAX_TYPING_LIST_SIZE; i++){
-    typingList.push(wordData[Math.floor(Math.random()*wordData.length)]);
+    let arrObject = {"word": wordData[Math.floor(Math.random()*wordData.length)] , "state":'notTyped'};
+    typingList.push(arrObject);
   }
 
   socket.emit('connection-info',typingList);
