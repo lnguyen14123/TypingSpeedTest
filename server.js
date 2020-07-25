@@ -17,11 +17,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 io.on('connection', socket=>{
 
   socket.emit('connection-info',getWords());
+
+  socket.on('words-request', (msg)=>{
+    socket.emit('connection-info',getWords());
+  })  
 });
 
-io.on('words-request', socket=>{
-  socket.emit('connection-info',getWords());
-})
 
 function getWords(){
   let typingList = [];

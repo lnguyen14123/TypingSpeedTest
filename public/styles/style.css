@@ -1,3 +1,7 @@
+button { 
+  outline: none; 
+  border: none;
+}
 
 body{
   font-family: "Roboto-Mono", monospace;
@@ -47,9 +51,20 @@ span{
 
 #typing-ui{
   text-align: center;
+
 }
 
 #info-main div{
   color: #2bed53;
   margin-bottom: 10px;
+}
+
+button{
+  padding: 5px 20px;
+  font-size: 17px;
+  background-color: #ff3636;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+
 }

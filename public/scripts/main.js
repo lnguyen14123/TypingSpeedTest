@@ -135,7 +135,6 @@ typingInput.addEventListener('keydown', (e)=>{
       }
     }  
   }
-
 });
 
 //reset button pressed
@@ -154,18 +153,16 @@ resetBtn.addEventListener('click', ()=>{
     element.style.color = '#e6cc67';
   });
 
-  typingInput.style.display = "block";
+  typingInput.style.display = "inline";
   typingDisplay.style.display = 'block';
   resultDisplay.style.display = 'none';
 
   removeAllChildNodes(document.getElementById('info-main'));
   removeAllChildNodes(typingDisplay);
   
-
   wordsTypedDis.innerHTML = "Words Typed: " + furthestWordOn;
 
   typingInput.value = "";
-
   socket.emit('words-request');
 });
 
