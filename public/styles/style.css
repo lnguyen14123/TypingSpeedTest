@@ -1,7 +1,7 @@
 
 body{
   font-family: "Roboto-Mono", monospace;
-  background-color: #1d1c1f;
+  background-color: #1a1b1c;
   color:#e6cc67;
 }
 
@@ -20,7 +20,7 @@ input{
   width: 500px;
   height: 40px;
   font-size: 20px;
-  background-color: #1d1c1f;
+  background-color: #1a1b1c;
   color: white;
   border-radius: 20px;
   padding: 10px;
@@ -47,4 +47,9 @@ span{
 
 #typing-ui{
   text-align: center;
+}
+
+#info-main div{
+  color: #2bed53;
+  margin-bottom: 10px;
 }

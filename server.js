@@ -15,18 +15,23 @@ const MAX_TYPING_LIST_SIZE = 250;
 app.use(express.static(path.join(__dirname, 'public')));
 
 io.on('connection', socket=>{
-  //send list of words over to front end
-  // socket.emit('wordsList', )
 
+  socket.emit('connection-info',getWords());
+});
+
+io.on('words-request', socket=>{
+  socket.emit('connection-info',getWords());
+})
+
+function getWords(){
   let typingList = [];
 
   for(var i = 0; i<MAX_TYPING_LIST_SIZE; i++){
     let arrObject = {"word": wordData[Math.floor(Math.random()*wordData.length)] , "state":'notTyped'};
     typingList.push(arrObject);
   }
-
-  socket.emit('connection-info',typingList);
-});
+  return typingList;
+}
 
 //250 words sent to front end in an array (world record = 216 wpm)
 
