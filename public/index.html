@@ -9,7 +9,15 @@
   <title>Typing Test</title>
 </head>
 <body>
-  <h1>Typing Test!</h1>
+  <header>
+    <h2 id="title" style="margin-right: 100px">Typing Test!</h2>
+    <h2 id="timer">Time Left: _____ </h2>
+    <h2 id="words-typed">Words Typed: _____   </h2>
+    <h2 id="wpm">WPM: _____ </h2>
+
+    <button id="reset-btn">Reset Timer</button>
+  
+  </header>
 
   <div id="typing-ui">
     <div id="words-display"></div>
@@ -17,7 +25,6 @@
     <input type="text" id="typing-input" placeholder="Enter text here" autocapitalize="off" autocomplete="off" spellcheck="off">
 
   </div>
-
   <script src="/socket.io/socket.io.js"></script>
   <script src="scripts/main.js"> </script>
 </body>

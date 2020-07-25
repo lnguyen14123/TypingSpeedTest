@@ -30,6 +30,4 @@ io.on('connection', socket=>{
 
 //250 words sent to front end in an array (world record = 216 wpm)
 
-
-
 server.listen(PORT, ()=>console.log('Typing site running at port: ' + PORT));

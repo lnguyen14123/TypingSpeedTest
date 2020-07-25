@@ -5,16 +5,29 @@ body{
   color:#e6cc67;
 }
 
+header{
+  margin-bottom: 40px;
+}
+
+h2{
+  display: inline;
+  margin-right: 40px;
+}
+
+
 input{
-  width: 300px;
+  margin-top: 10px;
+  width: 500px;
   height: 40px;
   font-size: 20px;
   background-color: #1d1c1f;
-  color: #e6cc67;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
 }
 
 span{
-  font-size: 20px;
+  font-size: 17px;
   border-radius: 10px;
   padding: 3px;
   margin: 0px;
